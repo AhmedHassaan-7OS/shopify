@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>ESTUDIO | Product Detail</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-container": "#838486",
+                    "on-secondary-container": "#616363",
+                    "surface-container-highest": "#e2e2e2",
+                    "background": "#f9f9f9",
+                    "on-primary-fixed": "#1b1b1b",
+                    "on-tertiary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed-dim": "#c6c6c8",
+                    "tertiary-fixed": "#e2e2e4",
+                    "surface-dim": "#dadada",
+                    "secondary-fixed": "#e2e2e2",
+                    "secondary-container": "#dfe0e0",
+                    "primary-fixed-dim": "#c6c6c6",
+                    "surface-container": "#eeeeee",
+                    "surface-variant": "#e2e2e2",
+                    "outline-variant": "#cfc4c5",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "error-container": "#ffdad6",
+                    "surface-container-high": "#e8e8e8",
+                    "on-secondary-fixed-variant": "#454747",
+                    "primary": "#000000",
+                    "on-surface-variant": "#4c4546",
+                    "on-primary-container": "#848484",
+                    "inverse-surface": "#303030",
+                    "on-error-container": "#93000a",
+                    "surface": "#f9f9f9",
+                    "on-background": "#1b1b1b",
+                    "on-tertiary-fixed-variant": "#454749",
+                    "secondary-fixed-dim": "#c6c6c7",
+                    "primary-fixed": "#e2e2e2",
+                    "on-tertiary-fixed": "#1a1c1d",
+                    "primary-container": "#1b1b1b",
+                    "inverse-on-surface": "#f1f1f1",
+                    "secondary": "#5d5f5f",
+                    "on-primary-fixed-variant": "#474747",
+                    "outline": "#7e7576",
+                    "tertiary": "#000000",
+                    "on-primary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-low": "#f3f3f3",
+                    "inverse-primary": "#c6c6c6",
+                    "on-surface": "#1b1b1b",
+                    "error": "#ba1a1a",
+                    "tertiary-container": "#1a1c1d",
+                    "surface-bright": "#f9f9f9",
+                    "surface-tint": "#5e5e5e",
+                    "on-secondary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-lg": "32px",
+                    "container-padding": "24px",
+                    "gutter-md": "16px",
+                    "stack-xl": "48px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "label-md": ["Inter"],
+                    "label-lg": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "headline-lg-mobile": ["Inter"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        /* Custom Carousel Logic */
+        .carousel-container {
+            scroll-snap-type: x mandatory;
+        }
+        .carousel-item {
+            scroll-snap-align: start;
+        }
+        
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .fill-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+
+        /* Ambient subtle animation for the hero */
+        @keyframes subtle-zoom {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.05); }
+        }
+        .hero-zoom {
+            animation: subtle-zoom 20s infinite alternate ease-in-out;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<!-- Top Navigation Anchor -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md flex justify-between items-center px-container-padding h-16">
+<button class="w-10 h-10 flex items-center justify-center rounded-full active:scale-95 transition-transform text-primary" onclick="history.back()">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</button>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile tracking-tighter text-primary">ESTUDIO</h1>
+<div class="flex gap-4">
+<button class="w-10 h-10 flex items-center justify-center rounded-full active:scale-95 transition-transform text-primary" id="favorite-btn">
+<span class="material-symbols-outlined" id="fav-icon">favorite</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full active:scale-95 transition-transform text-primary">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+</nav>
+<main class="pb-32 pt-16">
+<!-- Hero Carousel Section -->
+<section class="relative w-full aspect-[4/5] md:aspect-[16/9] overflow-hidden">
+<div class="carousel-container flex w-full h-full overflow-x-auto no-scrollbar scroll-smooth" id="carousel">
+<!-- Slide 1 -->
+<div class="carousel-item flex-none w-full h-full relative">
+<img class="hero-zoom w-full h-full object-cover" data-alt="Close-up high-fashion editorial shot of a luxury black leather handbag with gold hardware. The item is placed against a minimalist, light-gray architectural background with sharp shadows. The lighting is bright and high-key, emphasizing the premium texture of the leather. The overall aesthetic is clean, sophisticated, and modern, echoing a luxury retail experience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpByPU8xb-U3ZaXRbkLWzMSSUQ1yvhyxfIHOKRASTENsulNhxtrM7_iordhUeDXVPVJQbZyPtq2JBqPG9WD-Y6UaFi3NsHxuu8mWDYayk4mAgLOiJY8xy5ld258TUf-JvWz8ocXOCPa8HvqUBv0T-1sBcCrAPxnBFC5GZnfRE9MiCqKC_LVCE6TUg4Aqpm7NYUSZQASWdU-omOX4-CuVpfwEflaFN4hhFT7OqKoWwrJBlr9hKi3PLIwAFhnydpWAfKU_F69tlNVll2"/>
+</div>
+<!-- Slide 2 -->
+<div class="carousel-item flex-none w-full h-full relative">
+<img class="hero-zoom w-full h-full object-cover" data-alt="A wide-angle editorial lifestyle photograph of a minimalist fashion accessory displayed on a white marble plinth in a sun-drenched, high-ceiling studio. Soft natural light flows through large windows, creating gentle gradients and long, soft shadows. The color palette is strictly monochrome with subtle gold accents, projecting an atmosphere of quiet luxury and high-end elegance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB93n8jb07cER5fmRIarzoGB9u13pxJi5SLIVQ-1SZj280BeCWR_UQn0eGhZIKerGauUx_EyBde8rfKJ6OsMb_ofOwyoaiT5GCqbEpI5cTEwmEn17mehvKSMXv8tONq55bDUBGiQB5aqBidQZcBnMDVKMu9AJ86q-MEDMQxBVCe-n6Dtf_ad_Co-gnIC7D4UYIynMYn8YdX3totQJYAJJzCVQt7UORgopREqjEjC_7lKG7WBHdaTFe6t7AW5OIBdrDhoNtmUHWFhB_Y"/>
+</div>
+<!-- Slide 3 -->
+<div class="carousel-item flex-none w-full h-full relative">
+<img class="hero-zoom w-full h-full object-cover" data-alt="Macro detail shot showing the intricate stitching and polished gold-tone hardware of a premium designer product. The focus is razor-sharp on the craftsmanship, while the background remains a soft, out-of-focus cream color. The lighting is studio-quality, highlighting the reflective surfaces and the rich, matte finish of the primary material. Sophisticated and technical." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBZedkU2vdG7UMn2_TV3GtrMLTKWC1rhYABvKBqmrKuHcjzpQTjv3Jp5f404LLKX4Wog7f4-i9mi3hULZx6xZtrsAvti48szrP0ry0W1ZvH8hHLZ-wcQsMrA314lrt3MJtFXQU7bTBvUHqviBxyomkb9GDdC_ueR_7AOx1n4r55xY_MIyzee_sHVCErn-mM3YBIR7EAnBbkGnxIRyDx3hasv6CITFN0cGs_WDGHt-a0XQVPm8B65zesCSgcV3Sg_wYjtuq-iEK-IpY"/>
+</div>
+</div>
+<!-- Custom Dots Indicator -->
+<div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+<div class="w-2 h-2 rounded-full bg-primary transition-all duration-300" id="dot-0"></div>
+<div class="w-2 h-2 rounded-full bg-primary/20 transition-all duration-300" id="dot-1"></div>
+<div class="w-2 h-2 rounded-full bg-primary/20 transition-all duration-300" id="dot-2"></div>
+</div>
+</section>
+<!-- Product Content Canvas -->
+<section class="px-container-padding mt-stack-lg">
+<div class="flex flex-col gap-2">
+<span class="font-label-lg text-label-lg text-on-tertiary-container uppercase tracking-widest">Limited Edition</span>
+<div class="flex justify-between items-start">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary leading-tight max-w-[70%]">NOIR ARCHITECTURAL SHOULDER BAG</h2>
+<span class="font-headline-md text-headline-md text-primary">$1,850</span>
+</div>
+<!-- Rating -->
+<div class="flex items-center gap-1 mt-1">
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-sm fill-icon" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm fill-icon" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm fill-icon" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm fill-icon" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 0;">star</span>
+</div>
+<span class="font-label-md text-label-md text-on-secondary-container ml-2">(42 Reviews)</span>
+</div>
+</div>
+<!-- Bento Info Grid -->
+<div class="grid grid-cols-2 gap-gutter-md mt-stack-lg">
+<div class="bg-surface-container-low p-gutter-md rounded-xl flex flex-col gap-1">
+<span class="font-label-md text-label-md text-on-tertiary-container uppercase">Material</span>
+<span class="font-body-md text-body-md font-medium">Calfskin Leather</span>
+</div>
+<div class="bg-surface-container-low p-gutter-md rounded-xl flex flex-col gap-1">
+<span class="font-label-md text-label-md text-on-tertiary-container uppercase">Origin</span>
+<span class="font-body-md text-body-md font-medium">Made in Italy</span>
+</div>
+</div>
+<!-- Description -->
+<div class="mt-stack-xl">
+<h3 class="font-label-lg text-label-lg text-primary uppercase mb-4">Description</h3>
+<p class="font-body-lg text-body-lg text-secondary leading-relaxed">
+                    Crafted from ultra-matte calfskin leather, the Noir Architectural Shoulder Bag redefines modern luxury through structured minimalism. Featuring a sculptural silhouette inspired by mid-century brutalist design, this piece balances sharp geometric lines with effortless functionality.
+                </p>
+<p class="font-body-lg text-body-lg text-secondary leading-relaxed mt-4">
+                    The interior is lined with premium suede and includes a discrete magnetic closure and gold-tone hardware, ensuring your essentials are secured with sophisticated ease.
+                </p>
+</div>
+<!-- Details List -->
+<div class="mt-stack-lg border-t border-outline-variant/30 pt-stack-lg">
+<details class="group py-4 cursor-pointer">
+<summary class="flex justify-between items-center list-none font-label-lg text-label-lg text-primary uppercase">
+                        Size &amp; Fit
+                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="pt-4 font-body-md text-secondary">
+                        Width: 24cm / 9.4in<br/>
+                        Height: 18cm / 7.1in<br/>
+                        Depth: 8cm / 3.1in<br/>
+                        Strap Drop: 45cm / 17.7in
+                    </div>
+</details>
+<details class="group py-4 border-t border-outline-variant/30 cursor-pointer">
+<summary class="flex justify-between items-center list-none font-label-lg text-label-lg text-primary uppercase">
+                        Shipping &amp; Returns
+                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="pt-4 font-body-md text-secondary">
+                        Complimentary express shipping on all orders over $500. Returns accepted within 14 days of delivery.
+                    </div>
+</details>
+</div>
+</section>
+</main>
+<!-- Persistent Floating Action Button -->
+<div class="fixed bottom-0 left-0 w-full p-container-padding z-50 pointer-events-none">
+<div class="max-w-md mx-auto w-full pointer-events-auto">
+<button class="w-full h-16 bg-primary text-on-primary rounded-xl font-label-lg text-label-lg uppercase flex items-center justify-center gap-2 shadow-2xl active:scale-95 transition-all">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+                Add to Cart
+            </button>
+<!-- Safe area spacer for mobile -->
+<div class="h-safe"></div>
+</div>
+</div>
+<script>
+        // Simple Carousel Dots Sync
+        const carousel = document.getElementById('carousel');
+        const dots = [
+            document.getElementById('dot-0'),
+            document.getElementById('dot-1'),
+            document.getElementById('dot-2')
+        ];
+
+        carousel.addEventListener('scroll', () => {
+            const index = Math.round(carousel.scrollLeft / carousel.offsetWidth);
+            dots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.remove('bg-primary/20');
+                    dot.classList.add('bg-primary');
+                    dot.classList.add('scale-125');
+                } else {
+                    dot.classList.remove('bg-primary');
+                    dot.classList.remove('scale-125');
+                    dot.classList.add('bg-primary/20');
+                }
+            });
+        });
+
+        // Favorite Toggle Interaction
+        const favBtn = document.getElementById('favorite-btn');
+        const favIcon = document.getElementById('fav-icon');
+        let isFav = false;
+
+        favBtn.addEventListener('click', () => {
+            isFav = !isFav;
+            if (isFav) {
+                favIcon.style.fontVariationSettings = "'FILL' 1";
+                favIcon.classList.add('text-error');
+            } else {
+                favIcon.style.fontVariationSettings = "'FILL' 0";
+                favIcon.classList.remove('text-error');
+            }
+        });
+
+        // Horizontal drag to scroll for desktop feeling
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        carousel.addEventListener('mousedown', (e) => {
+            isDown = true;
+            startX = e.pageX - carousel.offsetLeft;
+            scrollLeft = carousel.scrollLeft;
+        });
+        carousel.addEventListener('mouseleave', () => {
+            isDown = false;
+        });
+        carousel.addEventListener('mouseup', () => {
+            isDown = false;
+        });
+        carousel.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - carousel.offsetLeft;
+            const walk = (x - startX) * 2;
+            carousel.scrollLeft = scrollLeft - walk;
+        });
+    </script>
+</body></html>

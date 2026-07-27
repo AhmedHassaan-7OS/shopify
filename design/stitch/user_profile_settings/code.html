@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ESTUDIO | Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-container": "#838486",
+                    "on-secondary-container": "#616363",
+                    "surface-container-highest": "#e2e2e2",
+                    "background": "#f9f9f9",
+                    "on-primary-fixed": "#1b1b1b",
+                    "on-tertiary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed-dim": "#c6c6c8",
+                    "tertiary-fixed": "#e2e2e4",
+                    "surface-dim": "#dadada",
+                    "secondary-fixed": "#e2e2e2",
+                    "secondary-container": "#dfe0e0",
+                    "primary-fixed-dim": "#c6c6c6",
+                    "surface-container": "#eeeeee",
+                    "surface-variant": "#e2e2e2",
+                    "outline-variant": "#cfc4c5",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "error-container": "#ffdad6",
+                    "surface-container-high": "#e8e8e8",
+                    "on-secondary-fixed-variant": "#454747",
+                    "primary": "#000000",
+                    "on-surface-variant": "#4c4546",
+                    "on-primary-container": "#848484",
+                    "inverse-surface": "#303030",
+                    "on-error-container": "#93000a",
+                    "surface": "#f9f9f9",
+                    "on-background": "#1b1b1b",
+                    "on-tertiary-fixed-variant": "#454749",
+                    "secondary-fixed-dim": "#c6c6c7",
+                    "primary-fixed": "#e2e2e2",
+                    "on-tertiary-fixed": "#1a1c1d",
+                    "primary-container": "#1b1b1b",
+                    "inverse-on-surface": "#f1f1f1",
+                    "secondary": "#5d5f5f",
+                    "on-primary-fixed-variant": "#474747",
+                    "outline": "#7e7576",
+                    "tertiary": "#000000",
+                    "on-primary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-low": "#f3f3f3",
+                    "inverse-primary": "#c6c6c6",
+                    "on-surface": "#1b1b1b",
+                    "error": "#ba1a1a",
+                    "tertiary-container": "#1a1c1d",
+                    "surface-bright": "#f9f9f9",
+                    "surface-tint": "#5e5e5e",
+                    "on-secondary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-lg": "32px",
+                    "container-padding": "24px",
+                    "gutter-md": "16px",
+                    "stack-xl": "48px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "label-md": ["Inter"],
+                    "label-lg": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "headline-lg-mobile": ["Inter"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9f9f9;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .profile-card-shadow {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+        }
+        .nav-active {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-24">
+<!-- TopAppBar Execution from JSON -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-md flex justify-between items-center px-container-padding h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="active:scale-95 transition-transform hover:opacity-70 transition-opacity text-primary dark:text-on-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile tracking-tighter text-primary dark:text-on-primary">ESTUDIO</h1>
+</div>
+<button class="active:scale-95 transition-transform hover:opacity-70 transition-opacity text-primary dark:text-on-primary">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</header>
+<main class="pt-24 px-container-padding">
+<!-- User Profile Header Section -->
+<section class="flex flex-col items-center text-center mb-stack-xl">
+<div class="relative mb-gutter-md group">
+<div class="w-32 h-32 rounded-full overflow-hidden profile-card-shadow border-4 border-surface-container-lowest">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A sophisticated, high-fashion close-up portrait of a modern professional with minimalist styling. The lighting is soft and high-key, emphasizing a clean skin texture and elegant aesthetic. The background is a soft, neutral grey-white gradient that complements the luxury minimalist brand identity of Estudio. The subject exudes confidence and modern luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzsKl0ppOKmyw7EosVB9VRx_Ktn6abOhjSlCmb5jxIMtfnN81kOWFIfdnSFlb5SCttrhXXbRN0eTsm163H-M6VOaY0NgeFZz3nmyWlst0N1TNozi_Ic15cI9-5H8SIPHXil9OAh9gRgRmYgCMd0R6Q9S26aA7ae5z4b-EmQ9Kake03jWnl7wxfxSwCujyaYQqxUHKMhaSFlBRtYopvNZLoC4huAEnkZ0m9PQ2C0H8hAkPUGghtEGAcctxCeTEF0ZQmS8yD963clqn1"/>
+</div>
+<button class="absolute bottom-1 right-1 bg-primary text-on-primary p-2 rounded-full shadow-lg active:scale-90 transition-transform">
+<span class="material-symbols-outlined !text-[18px]">edit</span>
+</button>
+</div>
+<div class="space-y-1">
+<h2 class="font-headline-md text-headline-md text-on-primary-fixed">Julianne Moreau</h2>
+<p class="font-body-md text-body-md text-on-secondary-container">j.moreau@estudio.com</p>
+<p class="font-label-md text-label-md text-on-tertiary-container">+1 (555) 892-4410</p>
+</div>
+</section>
+<!-- Profile Menu List -->
+<section class="bg-surface-container-lowest rounded-xl profile-card-shadow overflow-hidden">
+<!-- My Orders -->
+<a class="flex items-center justify-between p-gutter-md hover:bg-surface-container-low transition-colors group" href="#">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">package_2</span>
+</div>
+<span class="font-body-lg text-body-lg text-on-background">My Orders</span>
+</div>
+<span class="material-symbols-outlined text-on-tertiary-container group-hover:translate-x-1 transition-transform">chevron_right</span>
+</a>
+<div class="h-[1px] bg-surface-container mx-gutter-md"></div>
+<!-- Addresses -->
+<a class="flex items-center justify-between p-gutter-md hover:bg-surface-container-low transition-colors group" href="#">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<span class="font-body-lg text-body-lg text-on-background">Addresses</span>
+</div>
+<span class="material-symbols-outlined text-on-tertiary-container group-hover:translate-x-1 transition-transform">chevron_right</span>
+</a>
+<div class="h-[1px] bg-surface-container mx-gutter-md"></div>
+<!-- Payment Methods -->
+<a class="flex items-center justify-between p-gutter-md hover:bg-surface-container-low transition-colors group" href="#">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">credit_card</span>
+</div>
+<span class="font-body-lg text-body-lg text-on-background">Payment Methods</span>
+</div>
+<span class="material-symbols-outlined text-on-tertiary-container group-hover:translate-x-1 transition-transform">chevron_right</span>
+</a>
+<div class="h-[1px] bg-surface-container mx-gutter-md"></div>
+<!-- Preferences -->
+<a class="flex items-center justify-between p-gutter-md hover:bg-surface-container-low transition-colors group" href="#">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">settings</span>
+</div>
+<span class="font-body-lg text-body-lg text-on-background">Preferences</span>
+</div>
+<span class="material-symbols-outlined text-on-tertiary-container group-hover:translate-x-1 transition-transform">chevron_right</span>
+</a>
+</section>
+<!-- Logout Action -->
+<div class="mt-stack-lg">
+<button class="w-full h-14 bg-primary text-on-primary rounded-xl font-label-lg text-label-lg active:scale-[0.98] transition-transform shadow-lg flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">logout</span>
+                Logout
+            </button>
+</div>
+<!-- Decorative Info Section -->
+<div class="mt-stack-xl text-center pb-8">
+<p class="font-label-md text-label-md text-on-tertiary-container/60">ESTUDIO Member since 2023</p>
+<p class="font-label-md text-label-md text-on-tertiary-container/40 mt-1">Version 2.4.1</p>
+</div>
+</main>
+<!-- BottomNavBar Execution from JSON -->
+<!-- The "person" icon is active as we are on the Profile screen -->
+<nav class="fixed bottom-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-md flex justify-around items-center h-20 px-container-padding pb-safe border-t border-outline-variant/30 shadow-sm">
+<button class="flex flex-col items-center justify-center active:scale-90 transition-transform hover:text-primary dark:hover:text-on-primary transition-colors text-on-secondary-container/40 dark:text-on-secondary-container/40">
+<span class="material-symbols-outlined">home</span>
+</button>
+<button class="flex flex-col items-center justify-center active:scale-90 transition-transform hover:text-primary dark:hover:text-on-primary transition-colors text-on-secondary-container/40 dark:text-on-secondary-container/40">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="flex flex-col items-center justify-center active:scale-90 transition-transform hover:text-primary dark:hover:text-on-primary transition-colors text-on-secondary-container/40 dark:text-on-secondary-container/40">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<button class="flex flex-col items-center justify-center active:scale-90 transition-transform hover:text-primary dark:hover:text-on-primary transition-colors text-primary dark:text-on-primary scale-110">
+<span class="material-symbols-outlined nav-active" style="font-variation-settings: 'FILL' 1;">person</span>
+</button>
+</nav>
+<script>
+        // Micro-interactions for the list items
+        document.querySelectorAll('a').forEach(item => {
+            item.addEventListener('touchstart', () => {
+                item.classList.add('bg-surface-container-low');
+            });
+            item.addEventListener('touchend', () => {
+                setTimeout(() => {
+                    item.classList.remove('bg-surface-container-low');
+                }, 150);
+            });
+        });
+    </script>
+</body></html>

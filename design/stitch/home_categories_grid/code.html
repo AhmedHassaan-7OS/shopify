@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ESTUDIO | Luxury Categories</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .category-card:hover .zoom-img {
+            transform: scale(1.05);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#838486",
+                        "on-secondary-container": "#616363",
+                        "surface-container-highest": "#e2e2e2",
+                        "background": "#f9f9f9",
+                        "on-primary-fixed": "#1b1b1b",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed-dim": "#c6c6c8",
+                        "tertiary-fixed": "#e2e2e4",
+                        "surface-dim": "#dadada",
+                        "secondary-fixed": "#e2e2e2",
+                        "secondary-container": "#dfe0e0",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "surface-container": "#eeeeee",
+                        "surface-variant": "#e2e2e2",
+                        "outline-variant": "#cfc4c5",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#e8e8e8",
+                        "on-secondary-fixed-variant": "#454747",
+                        "primary": "#000000",
+                        "on-surface-variant": "#4c4546",
+                        "on-primary-container": "#848484",
+                        "inverse-surface": "#303030",
+                        "on-error-container": "#93000a",
+                        "surface": "#f9f9f9",
+                        "on-background": "#1b1b1b",
+                        "on-tertiary-fixed-variant": "#454749",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "primary-fixed": "#e2e2e2",
+                        "on-tertiary-fixed": "#1a1c1d",
+                        "primary-container": "#1b1b1b",
+                        "inverse-on-surface": "#f1f1f1",
+                        "secondary": "#5d5f5f",
+                        "on-primary-fixed-variant": "#474747",
+                        "outline": "#7e7576",
+                        "tertiary": "#000000",
+                        "on-primary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f3f3f3",
+                        "inverse-primary": "#c6c6c6",
+                        "on-surface": "#1b1b1b",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#1a1c1d",
+                        "surface-bright": "#f9f9f9",
+                        "surface-tint": "#5e5e5e",
+                        "on-secondary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-lg": "32px",
+                        "container-padding": "24px",
+                        "gutter-md": "16px",
+                        "stack-xl": "48px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface antialiased overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-md flex justify-between items-center px-container-padding h-16 w-full">
+<button class="active:scale-95 transition-transform hover:opacity-70 transition-opacity text-primary">
+<span class="material-symbols-outlined" style="font-size: 24px;">menu</span>
+</button>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile tracking-tighter text-primary">ESTUDIO</h1>
+<button class="active:scale-95 transition-transform hover:opacity-70 transition-opacity text-primary relative">
+<span class="material-symbols-outlined" style="font-size: 24px;">shopping_bag</span>
+<span class="absolute -top-1 -right-1 w-2 h-2 bg-primary rounded-full"></span>
+</button>
+</header>
+<main class="pt-24 pb-32 px-container-padding">
+<!-- Elegant Greeting & Search Section -->
+<section class="mb-stack-xl">
+<div class="flex flex-col gap-2 mb-gutter-md">
+<span class="font-label-lg text-label-lg text-on-tertiary-container uppercase tracking-widest">Collections 2024</span>
+<h2 class="font-display-lg text-display-lg text-primary leading-tight">Curated for<br/>Your Essence.</h2>
+</div>
+<div class="relative mt-8">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none text-on-secondary-container">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="w-full h-14 pl-12 pr-4 bg-surface-container-low border-none rounded-xl font-body-md text-body-md focus:ring-1 focus:ring-primary transition-all placeholder:text-on-secondary-container/50" placeholder="Search by brand or aesthetic..." type="text"/>
+</div>
+</section>
+<!-- Asymmetrical Category Grid -->
+<section class="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px] md:auto-rows-[300px]">
+<!-- Category: Beauty (Large Vertical) -->
+<div class="relative col-span-1 row-span-2 rounded-2xl overflow-hidden category-card cursor-pointer group shadow-sm">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 zoom-img" data-alt="A high-fashion beauty editorial shot in a minimalist studio. A model with luminous, dewy skin rests her hand near her face, showcasing luxury organic skincare products in sleek matte white glass bottles. The lighting is soft and ethereal, using a neutral palette of warm taupes and whites to create a calm, premium atmosphere." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDdIFLnAnR7vnVIxDyf1NiNMGukCBvy2VkkgtXH4fsU5_YpHjFxoXVZSMnJ3MaqgORbm2R6fcdgWJqgvDnpDufDoBt5szoWk84gXi9za14J352KVCgJQ7Su62OAsHD9x-11iArgmv2WXYcpfo1YX2mHueTsLoNs8mwzFzf4gEZmJfHihLXy_aXTq8a4CTLZupuXoJR5TMxaikPyxS4Qsvzkjc7o5m8-6PnGAhCUF2Fmf1a_34EgMk6TDzTlXKqTjLdhXp2ulO6-TcV9')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 flex flex-col">
+<span class="font-label-md text-label-md text-white/80 uppercase mb-1">01</span>
+<h3 class="font-headline-md text-headline-md text-white">Beauty</h3>
+</div>
+</div>
+<!-- Category: Fragrances (Wide Horizontal) -->
+<div class="relative col-span-1 md:col-span-2 row-span-1 rounded-2xl overflow-hidden category-card cursor-pointer group shadow-sm">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 zoom-img" data-alt="An artistic flat-lay composition of artisanal fragrance bottles on a polished obsidian surface. Wisps of soft smoke drift through the frame, illuminated by a single dramatic spotlight that highlights the golden liquid and minimalist typography on the labels. The aesthetic is ultra-modern, using high contrast between dark surfaces and radiant glass to evoke a sense of mystery and luxury." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDQOPI_sgqELInGAW8ITaDgZo1QdaoBe4h5HJa-IZvAVA4eWdbQ4e5sUpQn2RQrumYZHsq8d7IJlgkC9ve19zzcuXZxzwy-92KDjLSOQ29j1WDuKwUq5TfVhG2WkTP4sGq9_8vZJFm6qI9SJ7i3q0yQ5TiaxqILgOhtTZ2x6Vg9LMVySeC2TrUEKQd2JSPIEKpjtFOdNszHq7bKqBONvBJd4jjyn-MtFOng1Chr7uulR-GJr81iOWOVk2EZEH7XHspfDBCMzI4tKsCe')"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-transparent"></div>
+<div class="absolute top-6 right-6 text-right">
+<h3 class="font-headline-md text-headline-md text-white">Fragrances</h3>
+<span class="font-label-md text-label-md text-white/80 uppercase">Sensorial Discovery</span>
+</div>
+</div>
+<!-- Category: Apparel (Square) -->
+<div class="relative col-span-1 row-span-1 rounded-2xl overflow-hidden category-card cursor-pointer group shadow-sm">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 zoom-img" data-alt="Close-up of premium silk and cashmere fabrics in ivory and charcoal tones, draped elegantly over a minimalist chair. The texture of the weave is palpable, captured with high-definition clarity. The lighting is natural and bright, emphasizing the tactile quality of the luxury materials. The background is a clean white gallery wall." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBiXBZPsvQXDW8fxo7EcyB31w1WWKhZDVZw9_YZiBN4SBoTzXhaWfzzfz6ApQzghiTjumiuhIVMVGgBt-n54gf-HSFhswLlwIDpnofOrsFMFfHAic1S5i_CmjQL7B6TvJ9mFAWLqc2cb2CHk9L2rDXCdEhNNlk0-IUZPZYbPzeWQeZYY1QJI-oeUiA-VjSoKP9J6VrkapGUkBnOLrIjNxEHe0GrdGC8BidvoUKZ9YtNvZ5ybJQdakW7NRI5QClKMsEbQ0rTTumTuwyu')"></div>
+<div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="bg-white px-4 py-2 rounded-full shadow-lg transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+<span class="font-label-lg text-label-lg text-primary">Apparel</span>
+</div>
+</div>
+</div>
+<!-- Category: Furniture (Large Wide) -->
+<div class="relative col-span-2 md:col-span-3 row-span-1 rounded-2xl overflow-hidden category-card cursor-pointer group shadow-sm">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 zoom-img" data-alt="A spacious, high-ceilinged penthouse living room featuring avant-garde furniture design. A curved boucle sofa in cream sits on a large textured neutral rug, accompanied by a sculptural marble coffee table. Massive floor-to-ceiling windows let in soft daylight, creating a serene, high-end architectural atmosphere. The color palette is strictly tonal, ranging from bone to deep sand." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAsLHdUfZ498paKpfjypN9cFIeDG0CBnBOMY2bmTR7bvYPVW3GcKOf0IjHyeKJPrAyr0Sjfdz6LdVXMpXsAhvLaiMCp0jJooUsJMs5hzN2DmgjkSOMys7UaVViK8Nw-Pawd8QkuUZMLBxsLOKsfrxaXd-UBxZJ-6cXKBMYx9Z8u8ZE7RhWthnSe7IHWAN3eYcgGa7l2qclQr1EYBqoflNf_XChOYayGdc3W5pRHRYsdRxAWQff7AXsqWgHWbLHXf2qxrESfid6UboNF')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-8">
+<h3 class="font-headline-md text-headline-md text-white">Interior Art</h3>
+<p class="font-body-md text-body-md text-white/90 max-w-xs mt-2">Sculptural pieces for the modern sanctuary.</p>
+</div>
+</div>
+<!-- Category: Accessories (Small Vertical) -->
+<div class="relative col-span-1 row-span-1 rounded-2xl overflow-hidden category-card cursor-pointer group shadow-sm">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 zoom-img" data-alt="Macro photography of luxury jewelry and leather goods. A single gold architectural cuff bracelet is placed next to a micro-textured black leather clutch. The lighting is sharp and cinematic, creating deep shadows and brilliant highlights on the metallic surfaces. The composition is tight and graphic, emphasizing craftsmanship and detail." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAujaUCbkhSVuCgFrcy0ZB4dsg82uLp6f3KgeEmCv4-wO9eFeR3YlXJhpvPgFpqCu8npjpukdDeBLTjqz9VUa3fQf6OvUjW0C1lH5q_9w2pRjtYp_ce6wrKGwtxtVjOdIaeDR6isRDlco1xwTxTYWLYQ1JN5V2ThmCT4GZ1yHHg4p8oP9VgGLWgaFeXmoYSiYXuW8vjSFKWRzSyZ2sT3unvhm3OdSfsZs3FtDzPYyCslSrPN0HOlCFPD5SwMXPI-Qxh2GkWL8a6QS6O')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<h3 class="font-label-lg text-label-lg text-white">Accessories</h3>
+</div>
+</div>
+</section>
+<!-- Featured Designer Section -->
+<section class="mt-stack-xl">
+<div class="flex items-center justify-between mb-gutter-md">
+<h3 class="font-headline-md text-headline-md text-primary">Featured Maison</h3>
+<a class="font-label-lg text-label-lg text-primary border-b border-primary pb-1" href="#">View All</a>
+</div>
+<div class="bg-secondary-container rounded-2xl p-8 flex flex-col md:flex-row items-center gap-8 group cursor-pointer transition-all hover:bg-secondary-container/80">
+<div class="w-full md:w-1/3 aspect-square rounded-xl overflow-hidden shadow-xl">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-1000" data-alt="A portrait of a contemporary luxury designer in a minimalist studio. They are surrounded by architectural sketches and high-end fabric swatches. The mood is professional and creative, with a soft-focus background of an industrial loft. The lighting is dramatic yet soft, highlighting the designer's focused expression and the premium textures around them." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAAe8V9c2HKqbKNdrTSeQD_Foy-Qp8TB7FsHGN7__-h25CaALDYRsXzKnNHU4Q3PdCuaPPp1A2jEndR3Brx-odwIabqKOQyCbgkjexwcxI4yDicUiaFhKVUI-i7N5EUdA8luhGSERwhWni5VVO6Oo7IdY7IVOKKyoyDdmuHZwmhCNgxCVg99IFxJ0sHNV3yGF8MsF2PZvSytUkT6HNeXO9TKkolZ-9NzOcL2rrJhOjdBlQvGg2Dg2iQgCrknYXAl9VpszUG0yitsjW_')"></div>
+</div>
+<div class="w-full md:w-2/3">
+<span class="font-label-md text-label-md text-on-secondary-container uppercase tracking-widest mb-2 block">Artist in Residence</span>
+<h4 class="font-display-lg text-display-lg text-primary mb-4">Maison de L'Éclat</h4>
+<p class="font-body-lg text-body-lg text-on-secondary-container mb-6 leading-relaxed">
+                        Redefining the boundaries of sustainable luxury through modular silhouettes and raw mineral pigments. Discover the limited winter capsule.
+                    </p>
+<button class="bg-primary text-on-primary font-label-lg text-label-lg px-8 py-4 rounded-xl active:scale-95 transition-transform hover:opacity-90">
+                        Explore Collection
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-md flex justify-around items-center h-20 px-container-padding pb-safe border-t border-outline-variant/30 shadow-sm">
+<a class="flex flex-col items-center justify-center text-primary scale-110 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-container/40 hover:text-primary transition-colors active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">search</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-container/40 hover:text-primary transition-colors active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">favorite</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-container/40 hover:text-primary transition-colors active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">person</span>
+</a>
+</nav>
+<script>
+        // Micro-interaction for category cards
+        document.querySelectorAll('.category-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const img = card.querySelector('.zoom-img');
+                if (img) img.style.transform = 'scale(1.08)';
+            });
+            card.addEventListener('mouseleave', () => {
+                const img = card.querySelector('.zoom-img');
+                if (img) img.style.transform = 'scale(1)';
+            });
+        });
+
+        // Search bar interaction
+        const searchInput = document.querySelector('input[type="text"]');
+        searchInput.addEventListener('focus', () => {
+            searchInput.parentElement.classList.add('scale-[1.01]');
+            searchInput.parentElement.classList.add('shadow-md');
+        });
+        searchInput.addEventListener('blur', () => {
+            searchInput.parentElement.classList.remove('scale-[1.01]');
+            searchInput.parentElement.classList.remove('shadow-md');
+        });
+    </script>
+</body></html>
